@@ -1,0 +1,48 @@
+\nFIFO
+Step | Page | Frame 1 | Frame 2 | Frame 3 | Result | Replaced
+-------------------------------------------------------------------------
+1 | 1 | 1 | - | - | Fault | -
+2 | 2 | 1 | 2 | - | Fault | -
+3 | 3 | 1 | 2 | 3 | Fault | -
+4 | 1 | 1 | 2 | 3 | Hit | -
+5 | 4 | 4 | 2 | 3 | Fault | 1
+6 | 2 | 4 | 2 | 3 | Hit | -
+7 | 5 | 4 | 5 | 3 | Fault | 2
+Page faults: 5
+Page hits:   2
+Hit ratio:   28.57%
+Fault ratio: 71.43%
+\nLRU
+Step | Page | Frame 1 | Frame 2 | Frame 3 | Result | Replaced
+-------------------------------------------------------------------------
+1 | 1 | 1 | - | - | Fault | -
+2 | 2 | 1 | 2 | - | Fault | -
+3 | 3 | 1 | 2 | 3 | Fault | -
+4 | 1 | 1 | 2 | 3 | Hit | -
+5 | 4 | 1 | 4 | 3 | Fault | 2
+6 | 2 | 1 | 4 | 2 | Fault | 3
+7 | 5 | 5 | 4 | 2 | Fault | 1
+Page faults: 6
+Page hits:   1
+Hit ratio:   14.29%
+Fault ratio: 85.71%
+\nOptimal
+Step | Page | Frame 1 | Frame 2 | Frame 3 | Result | Replaced
+-------------------------------------------------------------------------
+1 | 1 | 1 | - | - | Fault | -
+2 | 2 | 1 | 2 | - | Fault | -
+3 | 3 | 1 | 2 | 3 | Fault | -
+4 | 1 | 1 | 2 | 3 | Hit | -
+5 | 4 | 4 | 2 | 3 | Fault | 1
+6 | 2 | 4 | 2 | 3 | Hit | -
+7 | 5 | 5 | 2 | 3 | Fault | 4
+Page faults: 5
+Page hits:   2
+Hit ratio:   28.57%
+Fault ratio: 71.43%
+\nPERFORMANCE COMPARISON
+Algorithm      Faults     Hits    Hit ratio  Fault ratio
+--------------------------------------------------------
+FIFO                5        2      28.57%      71.43%
+LRU                 6        1      14.29%      85.71%
+Optimal             5        2      28.57%      71.43%
