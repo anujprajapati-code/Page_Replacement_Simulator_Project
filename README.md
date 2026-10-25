@@ -13,7 +13,7 @@ A Python/Jupyter Notebook project for the Operating Systems Lab assignment. It s
 ## Files
 - `Page_Replacement_Simulator.ipynb` — notebook with explanations, implementation, sample outputs, and assignment answers.
 - `page_replacement.py` — standalone Python source code.
-- `Project_Report.docx` — brief report.
+- `Project_Report.pdf` — brief report.
 - `Assignment_Answers.md` — manual tracing and Part C answers.
 - `screenshots/` — sample execution screenshots.
 
